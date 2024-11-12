@@ -1,0 +1,21 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+
+    <div class="d-flex flex-column mb-3">
+        <div class="p-2">
+          <h1>Tasks</h1>
+          <form action="{% url 'tasks:add' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            
+            <input type="submit">
+
+          </form> 
+
+        </div>
+    </div>
+
+    <a href="{% url 'tasks:index' %}">View Tasks</a>
+
+{% endblock %}

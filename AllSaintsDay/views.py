@@ -5,5 +5,5 @@ from django.shortcuts import render
 def index(request):
     now = datetime.datetime.now()
     return render(request, "AllSaintsDay/index.html", {
-        "AllSaintsDay": now.month ==10 and now.day == 2
+        "AllSaintsDay": now.month ==10 and now.day == 30
     })
